@@ -132,7 +132,7 @@ const GameScreen = ({ setSelectedScreen, selectedScreen, selectedLevel, setSelec
 
     const playMySound = async (savedButtons) => {
         for (const buttonId of savedButtons) {
-            const button = soundButtons.find((btn) => btn.id === buttonId);
+            const button = soundButtons.find((bttn) => bttn.id === buttonId);
             if (button) {
                 await playSoundReplay(button.sound);
             }
