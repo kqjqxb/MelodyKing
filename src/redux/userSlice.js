@@ -2,8 +2,6 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const initialState = {
-  gameHeadsCount: 0,
-  gameTailsCount: 0,
 };
 
 export const saveUserData = createAsyncThunk('user/saveUserData', async (userData) => {
@@ -35,12 +33,6 @@ const userSlice = createSlice({
       return { ...state, ...action.payload };
     },
     resetUserData: () => initialState,
-    incrementHeads: (state) => {
-      state.gameHeadsCount += 1;
-    },
-    incrementTails: (state) => {
-      state.gameTailsCount += 1;
-    },
   },
   extraReducers: (builder) => {
     builder.addCase(loadUserData.fulfilled, (state, action) => {
@@ -49,5 +41,5 @@ const userSlice = createSlice({
   },
 });
 
-export const { setUserData, updateUserData, resetUserData, incrementHeads, incrementTails } = userSlice.actions;
+export const { setUserData, updateUserData, resetUserData} = userSlice.actions;
 export default userSlice.reducer;
