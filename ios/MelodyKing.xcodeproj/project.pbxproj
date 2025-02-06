@@ -8,23 +8,73 @@
 
 /* Begin PBXBuildFile section */
 		0C80B921A6F3F58F76C31292 /* libPods-MelodyKing.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-MelodyKing.a */; };
+		1147FFB228C049BFB30F858B /* SFProText-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB27EE4B54A645FD9A7B47E8 /* SFProText-Medium.ttf */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		13C5CC47F9204EA595D5A6BA /* SFProText-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0775D7963B94BFE96B0024B /* SFProText-SemiboldItalic.ttf */; };
+		1C4C6D0F33234E089595E632 /* SFProText-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6B4E829D26F4F36AF29BBC6 /* SFProText-MediumItalic.ttf */; };
+		290BE9182BFE4546B0317F31 /* SFProText-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F3B11135F464887842F464C /* SFProText-Semibold.ttf */; };
+		37351796055E4421B8E29C2D /* SFProText-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D7577F0D056490FA00C657B /* SFProText-Bold.ttf */; };
+		3CD33392AD3C4BEB8046E9FF /* SFProText-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE06B4CEF13E45998818463A /* SFProText-Heavy.ttf */; };
+		3F9BDFA3B4414170B73AC53A /* SFProText-HeavyItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2EEDEFAB9684D299CCEB91E /* SFProText-HeavyItalic.ttf */; };
+		473B314F027C4CCE9AA414FF /* LuckiestGuy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59F8CF0B5ABC41CC8C22F363 /* LuckiestGuy-Regular.ttf */; };
+		4C78E09EE79147118C81B7E4 /* SFProText-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 466DDEDE02E7446999CAD0CA /* SFProText-Light.ttf */; };
+		637390E116B04BB2BE0AA84C /* SFProText-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1571FBC085A42E098E7E9D9 /* SFProText-LightItalic.ttf */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		906260A3812E4F1E9B22B1EB /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 848070CD8C684355A9DC0D0B /* Montserrat-SemiBold.ttf */; };
+		93635AFDCBEE4146A52969E1 /* SFProText-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1372A80B2BAC44C89932576D /* SFProText-BoldItalic.ttf */; };
+		AAA51F7DA7BC400493D81000 /* SFProText-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 311D1C4B0C714F3E871FAEDE /* SFProText-Regular.ttf */; };
+		AD39230E42274EFD97D687AF /* SFProText-RegularItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F745D3AB6CF94109BCBAAB70 /* SFProText-RegularItalic.ttf */; };
+		B4A98E6C11494BC4B60E2EEA /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39DF5E6CF0B64F0E90FA53A9 /* Montserrat-Black.ttf */; };
+		C784F7490D5745D2B53190AA /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 348A305AD67E4EC296CE59F6 /* Montserrat-Light.ttf */; };
+		CE171DC12D538B0D00035A7C /* s7.wav in Resources */ = {isa = PBXBuildFile; fileRef = CE171DC02D538B0D00035A7C /* s7.wav */; };
+		CE171DC22D538B0D00035A7C /* s5.wav in Resources */ = {isa = PBXBuildFile; fileRef = CE171DBE2D538B0D00035A7C /* s5.wav */; };
+		CE171DC32D538B0D00035A7C /* s2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CE171DBB2D538B0D00035A7C /* s2.wav */; };
+		CE171DC42D538B0D00035A7C /* s6.wav in Resources */ = {isa = PBXBuildFile; fileRef = CE171DBF2D538B0D00035A7C /* s6.wav */; };
+		CE171DC52D538B0D00035A7C /* s4.wav in Resources */ = {isa = PBXBuildFile; fileRef = CE171DBD2D538B0D00035A7C /* s4.wav */; };
+		CE171DC62D538B0D00035A7C /* s1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CE171DBA2D538B0D00035A7C /* s1.wav */; };
+		CE171DC72D538B0D00035A7C /* s3.wav in Resources */ = {isa = PBXBuildFile; fileRef = CE171DBC2D538B0D00035A7C /* s3.wav */; };
 		E87E376EAEAB5F6E09321910 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		E9E832741B8A4661992901CE /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A85760878FE42CCB17E8FBC /* Montserrat-Bold.ttf */; };
+		FA024D27BA4043F09AC04981 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E719DB6696F845E7BF819513 /* Montserrat-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1372A80B2BAC44C89932576D /* SFProText-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProText-BoldItalic.ttf"; path = "../src/assets/fonts/SFProText-BoldItalic.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* MelodyKing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MelodyKing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MelodyKing/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = MelodyKing/Info.plist; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = MelodyKing/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		311D1C4B0C714F3E871FAEDE /* SFProText-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProText-Regular.ttf"; path = "../src/assets/fonts/SFProText-Regular.ttf"; sourceTree = "<group>"; };
+		348A305AD67E4EC296CE59F6 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Light.ttf"; path = "../src/assets/fonts/Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		39DF5E6CF0B64F0E90FA53A9 /* Montserrat-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Black.ttf"; path = "../src/assets/fonts/Montserrat-Black.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-MelodyKing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MelodyKing.debug.xcconfig"; path = "Target Support Files/Pods-MelodyKing/Pods-MelodyKing.debug.xcconfig"; sourceTree = "<group>"; };
+		466DDEDE02E7446999CAD0CA /* SFProText-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProText-Light.ttf"; path = "../src/assets/fonts/SFProText-Light.ttf"; sourceTree = "<group>"; };
+		4A85760878FE42CCB17E8FBC /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Bold.ttf"; path = "../src/assets/fonts/Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-MelodyKing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MelodyKing.release.xcconfig"; path = "Target Support Files/Pods-MelodyKing/Pods-MelodyKing.release.xcconfig"; sourceTree = "<group>"; };
+		59F8CF0B5ABC41CC8C22F363 /* LuckiestGuy-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "LuckiestGuy-Regular.ttf"; path = "../src/assets/fonts/LuckiestGuy-Regular.ttf"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-MelodyKing.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MelodyKing.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = MelodyKing/AppDelegate.swift; sourceTree = "<group>"; };
+		7D7577F0D056490FA00C657B /* SFProText-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProText-Bold.ttf"; path = "../src/assets/fonts/SFProText-Bold.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = MelodyKing/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		848070CD8C684355A9DC0D0B /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-SemiBold.ttf"; path = "../src/assets/fonts/Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		9F3B11135F464887842F464C /* SFProText-Semibold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProText-Semibold.ttf"; path = "../src/assets/fonts/SFProText-Semibold.ttf"; sourceTree = "<group>"; };
+		A2EEDEFAB9684D299CCEB91E /* SFProText-HeavyItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProText-HeavyItalic.ttf"; path = "../src/assets/fonts/SFProText-HeavyItalic.ttf"; sourceTree = "<group>"; };
+		C0775D7963B94BFE96B0024B /* SFProText-SemiboldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProText-SemiboldItalic.ttf"; path = "../src/assets/fonts/SFProText-SemiboldItalic.ttf"; sourceTree = "<group>"; };
+		CE171DBA2D538B0D00035A7C /* s1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = s1.wav; sourceTree = "<group>"; };
+		CE171DBB2D538B0D00035A7C /* s2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = s2.wav; sourceTree = "<group>"; };
+		CE171DBC2D538B0D00035A7C /* s3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = s3.wav; sourceTree = "<group>"; };
+		CE171DBD2D538B0D00035A7C /* s4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = s4.wav; sourceTree = "<group>"; };
+		CE171DBE2D538B0D00035A7C /* s5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = s5.wav; sourceTree = "<group>"; };
+		CE171DBF2D538B0D00035A7C /* s6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = s6.wav; sourceTree = "<group>"; };
+		CE171DC02D538B0D00035A7C /* s7.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = s7.wav; sourceTree = "<group>"; };
+		E6B4E829D26F4F36AF29BBC6 /* SFProText-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProText-MediumItalic.ttf"; path = "../src/assets/fonts/SFProText-MediumItalic.ttf"; sourceTree = "<group>"; };
+		E719DB6696F845E7BF819513 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Regular.ttf"; path = "../src/assets/fonts/Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		EE06B4CEF13E45998818463A /* SFProText-Heavy.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProText-Heavy.ttf"; path = "../src/assets/fonts/SFProText-Heavy.ttf"; sourceTree = "<group>"; };
+		F1571FBC085A42E098E7E9D9 /* SFProText-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProText-LightItalic.ttf"; path = "../src/assets/fonts/SFProText-LightItalic.ttf"; sourceTree = "<group>"; };
+		F745D3AB6CF94109BCBAAB70 /* SFProText-RegularItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProText-RegularItalic.ttf"; path = "../src/assets/fonts/SFProText-RegularItalic.ttf"; sourceTree = "<group>"; };
+		FB27EE4B54A645FD9A7B47E8 /* SFProText-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProText-Medium.ttf"; path = "../src/assets/fonts/SFProText-Medium.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +89,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01E48EAEB2D742CFB29FF1F6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE171DBA2D538B0D00035A7C /* s1.wav */,
+				CE171DBB2D538B0D00035A7C /* s2.wav */,
+				CE171DBC2D538B0D00035A7C /* s3.wav */,
+				CE171DBD2D538B0D00035A7C /* s4.wav */,
+				CE171DBE2D538B0D00035A7C /* s5.wav */,
+				CE171DBF2D538B0D00035A7C /* s6.wav */,
+				CE171DC02D538B0D00035A7C /* s7.wav */,
+				59F8CF0B5ABC41CC8C22F363 /* LuckiestGuy-Regular.ttf */,
+				39DF5E6CF0B64F0E90FA53A9 /* Montserrat-Black.ttf */,
+				4A85760878FE42CCB17E8FBC /* Montserrat-Bold.ttf */,
+				348A305AD67E4EC296CE59F6 /* Montserrat-Light.ttf */,
+				E719DB6696F845E7BF819513 /* Montserrat-Regular.ttf */,
+				848070CD8C684355A9DC0D0B /* Montserrat-SemiBold.ttf */,
+				7D7577F0D056490FA00C657B /* SFProText-Bold.ttf */,
+				1372A80B2BAC44C89932576D /* SFProText-BoldItalic.ttf */,
+				EE06B4CEF13E45998818463A /* SFProText-Heavy.ttf */,
+				A2EEDEFAB9684D299CCEB91E /* SFProText-HeavyItalic.ttf */,
+				466DDEDE02E7446999CAD0CA /* SFProText-Light.ttf */,
+				F1571FBC085A42E098E7E9D9 /* SFProText-LightItalic.ttf */,
+				FB27EE4B54A645FD9A7B47E8 /* SFProText-Medium.ttf */,
+				E6B4E829D26F4F36AF29BBC6 /* SFProText-MediumItalic.ttf */,
+				311D1C4B0C714F3E871FAEDE /* SFProText-Regular.ttf */,
+				F745D3AB6CF94109BCBAAB70 /* SFProText-RegularItalic.ttf */,
+				9F3B11135F464887842F464C /* SFProText-Semibold.ttf */,
+				C0775D7963B94BFE96B0024B /* SFProText-SemiboldItalic.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		13B07FAE1A68108700A75B9A /* MelodyKing */ = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +157,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				01E48EAEB2D742CFB29FF1F6 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -161,6 +244,31 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				E87E376EAEAB5F6E09321910 /* PrivacyInfo.xcprivacy in Resources */,
+				473B314F027C4CCE9AA414FF /* LuckiestGuy-Regular.ttf in Resources */,
+				B4A98E6C11494BC4B60E2EEA /* Montserrat-Black.ttf in Resources */,
+				E9E832741B8A4661992901CE /* Montserrat-Bold.ttf in Resources */,
+				C784F7490D5745D2B53190AA /* Montserrat-Light.ttf in Resources */,
+				FA024D27BA4043F09AC04981 /* Montserrat-Regular.ttf in Resources */,
+				906260A3812E4F1E9B22B1EB /* Montserrat-SemiBold.ttf in Resources */,
+				37351796055E4421B8E29C2D /* SFProText-Bold.ttf in Resources */,
+				93635AFDCBEE4146A52969E1 /* SFProText-BoldItalic.ttf in Resources */,
+				3CD33392AD3C4BEB8046E9FF /* SFProText-Heavy.ttf in Resources */,
+				3F9BDFA3B4414170B73AC53A /* SFProText-HeavyItalic.ttf in Resources */,
+				4C78E09EE79147118C81B7E4 /* SFProText-Light.ttf in Resources */,
+				637390E116B04BB2BE0AA84C /* SFProText-LightItalic.ttf in Resources */,
+				1147FFB228C049BFB30F858B /* SFProText-Medium.ttf in Resources */,
+				1C4C6D0F33234E089595E632 /* SFProText-MediumItalic.ttf in Resources */,
+				AAA51F7DA7BC400493D81000 /* SFProText-Regular.ttf in Resources */,
+				AD39230E42274EFD97D687AF /* SFProText-RegularItalic.ttf in Resources */,
+				290BE9182BFE4546B0317F31 /* SFProText-Semibold.ttf in Resources */,
+				13C5CC47F9204EA595D5A6BA /* SFProText-SemiboldItalic.ttf in Resources */,
+				CE171DC12D538B0D00035A7C /* s7.wav in Resources */,
+				CE171DC22D538B0D00035A7C /* s5.wav in Resources */,
+				CE171DC32D538B0D00035A7C /* s2.wav in Resources */,
+				CE171DC42D538B0D00035A7C /* s6.wav in Resources */,
+				CE171DC52D538B0D00035A7C /* s4.wav in Resources */,
+				CE171DC62D538B0D00035A7C /* s1.wav in Resources */,
+				CE171DC72D538B0D00035A7C /* s3.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +368,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = MelodyKing/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
@@ -273,7 +382,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.melodykinggingscolorkeys.app;
 				PRODUCT_NAME = MelodyKing;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -288,6 +397,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MelodyKing/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -300,7 +410,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.melodykinggingscolorkeys.app;
 				PRODUCT_NAME = MelodyKing;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -376,10 +486,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
@@ -448,10 +555,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
