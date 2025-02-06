@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { View, FlatList, Animated, Text, TouchableOpacity, ImageBackground, Dimensions, Image, Platform } from 'react-native';
-import verdeOnboardingData from '../components/madeiraOnboardingDataFile';
 import { useNavigation } from '@react-navigation/native';
 
 
@@ -12,9 +11,6 @@ const fontLuckiestGuyRegular = 'LuckiestGuy-Regular';
 const OnboardingScreen = () => {
   const [dimensions, setDimensions] = useState(Dimensions.get('window'));
   const navigation = useNavigation();
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const scrollX = useRef(new Animated.Value(0)).current;
-  const slidesRef = useRef(null);
 
   useEffect(() => {
     const onChange = ({ window }) => {
@@ -30,18 +26,10 @@ const OnboardingScreen = () => {
 
 
 
-
-  const viewableItemsChanged = useRef(({ viewableItems }) => {
-    if (viewableItems && viewableItems.length > 0) {
-      setCurrentIndex(viewableItems[0].index);
-    }
-  }).current;
-
-  const viewConfig = useRef({ viewAreaCoveragePercentThreshold: 50 }).current;
-
-
-  const renderItem = ({ item }) => (
-    <View style={{ width: dimensions.width, flex: 1, justifyContent: 'flex-start', alignItems: 'center' }} >
+  return (
+    <View
+      style={{ justifyContent: 'space-between', flex: 1, backgroundColor: '#212121', alignItems: 'center', height: dimensions.height }}
+    >
       <Image
         resizeMode="stretch"
         source={require('../assets/images/OnboardingBackground.png')}
@@ -94,31 +82,6 @@ const OnboardingScreen = () => {
           }}>
           Get ready to groove! Challenge your memory in the main game or unleash your creativity by crafting your own melodies🎶
         </Text>
-      </View>
-    </View>
-  );
-
-  return (
-    <View
-      style={{ justifyContent: 'space-between', flex: 1, backgroundColor: '#212121', alignItems: 'center', }}
-    >
-      <View style={{ display: 'flex' }}>
-        <FlatList
-          data={verdeOnboardingData}
-          renderItem={renderItem}
-          horizontal
-          bounces={false}
-          pagingEnabled
-          showsHorizontalScrollIndicator={false}
-          keyExtractor={(item) => item.id.toString()}
-          onScroll={Animated.event([{ nativeEvent: { contentOffset: { x: scrollX } } }], {
-            useNativeDriver: false,
-          })}
-          onViewableItemsChanged={viewableItemsChanged}
-          viewabilityConfig={viewConfig}
-          scrollEventThrottle={32}
-          ref={slidesRef}
-        />
       </View>
 
       <TouchableOpacity

@@ -101,7 +101,8 @@ const AboutScreen = ({ setSelectedScreen }) => {
             borderWidth: dimensions.width * 0.008,
             alignItems: 'center',
             justifyContent: 'center',
-            width: dimensions.width * 0.8
+            width: dimensions.width * 0.8,
+            paddingBottom: dimensions.height * 0.005
           }}>
             <Text
               style={{
