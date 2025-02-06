@@ -11,6 +11,7 @@ import {
   Easing,
   ImageBackground,
   SafeAreaView,
+  Alert,
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
@@ -35,6 +36,7 @@ const HomeScreen = () => {
 
   const [isLevelsVisible, setIsLevelsVisible] = useState(false);
   const [selectedLevel, setSelectedLevel] = useState(1);
+  const [completedLevels, setCompletedLevels] = useState([]);
 
   const loadSettings = async () => {
     try {
@@ -43,6 +45,37 @@ const HomeScreen = () => {
       if (soundValue !== null) setSoundEnabled(JSON.parse(soundValue));
     } catch (error) {
       console.error("Error loading settings:", error);
+    }
+  };
+
+
+  useEffect(() => {
+    const loadCompletedLevels = async () => {
+      try {
+        const storedLevels = await AsyncStorage.getItem('completedLevels');
+        if (storedLevels !== null) {
+          setCompletedLevels(JSON.parse(storedLevels));
+        } else {
+          // Якщо в AsyncStorage ще нема completedLevels, додаємо перший рівень
+          const initialLevels = [1];
+          await AsyncStorage.setItem('completedLevels', JSON.stringify(initialLevels));
+          setCompletedLevels(initialLevels);
+        }
+      } catch (error) {
+        console.error('Failed to load completed levels:', error);
+      }
+    };
+
+    loadCompletedLevels();
+  }, [selectedLevel, selectedScreen]);
+
+
+  const handleLevelPress = async (lvl) => {
+    if (completedLevels.includes(lvl)) {
+      setSelectedLevel(lvl);
+      setSelectedScreen('Game');
+    } else {
+      Alert.alert('Level not completed', 'You have not completed this level yet.');
     }
   };
 
@@ -291,10 +324,11 @@ const HomeScreen = () => {
               {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16].map((lvl, index) => (
                 <TouchableOpacity
                   key={index}
-                  onPress={() => {
-                    setSelectedLevel(lvl);
-                    setSelectedScreen('Game');
-                  }}
+                  // onPress={() => {
+                  //   setSelectedLevel(lvl);
+                  //   setSelectedScreen('Game');
+                  // }}
+                  onPress={() => handleLevelPress(lvl)}
                   style={{
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -319,7 +353,7 @@ const HomeScreen = () => {
                       padding: dimensions.width * 0.03,
                     }}
                   >
-                    {lvl}
+                    {completedLevels.includes(lvl) ? lvl : '·'}
                   </Text>
 
                 </TouchableOpacity>

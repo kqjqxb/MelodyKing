@@ -14,6 +14,7 @@ import {
 } from 'react-native';
 import Sound from 'react-native-sound';
 import { useAudio } from '../context/AudioContext';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const fontLuckiestGuyRegular = 'LuckiestGuy-Regular'
 const fontSFProRegular = 'SFProText-Regular'
@@ -81,11 +82,34 @@ const GameScreen = ({ setSelectedScreen, selectedScreen, selectedLevel, setSelec
     const [dimensions, setDimensions] = useState(Dimensions.get('window'));
     const [isGameStarted, setIsGameStarted] = useState(true);
     const [isGameFinished, setIsGameFinished] = useState(false);
-    const [gameResult, setGameResult] = useState('Win');
+    const [gameResult, setGameResult] = useState('');
     const [selectedButtons, setSelectedButtons] = useState([]);
     const { volume } = useAudio();
     const [isMelodyRunned, setIsMelodyRunned] = useState(false);
     const [isPreparingVisible, setIsPreparingVisible] = useState(true);
+
+
+    useEffect(() => {
+        const updateCompletedLevels = async () => {
+            if (gameResult === 'Win') {
+                if (selectedLevel < 16) {
+                    try {
+                        const storedLevels = await AsyncStorage.getItem('completedLevels');
+                        let completedLevels = storedLevels ? JSON.parse(storedLevels) : [];
+
+                        if (!completedLevels.includes(selectedLevel + 1)) {
+                            completedLevels.push(selectedLevel + 1);
+                            await AsyncStorage.setItem('completedLevels', JSON.stringify(completedLevels));
+                        }
+                    } catch (error) {
+                        console.error('Failed to update completed levels:', error);
+                    }
+                }
+            }
+        };
+
+        updateCompletedLevels();
+    }, [gameResult, selectedLevel]);
 
 
 
@@ -122,7 +146,7 @@ const GameScreen = ({ setSelectedScreen, selectedScreen, selectedLevel, setSelec
 
 
     useEffect(() => {
-        
+
         if (selectedButtons.length === levels[selectedLevel - 1].buttons.length) {
             setIsGameFinished(true);
             for (let i = 0; i < selectedButtons.length; i++) {
@@ -262,20 +286,26 @@ const GameScreen = ({ setSelectedScreen, selectedScreen, selectedLevel, setSelec
                     </Text>
 
 
-                    <TouchableOpacity style={{
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        borderRadius: dimensions.width * 0.057,
-                        backgroundColor: '#F9D54D',
-                        borderColor: '#e0c14c',
-                        width: dimensions.width * 0.4,
-                        alignSelf: 'center',
-                        width: dimensions.width * 0.88,
-                        borderWidth: dimensions.width * 0.01,
-                        paddingVertical: dimensions.height * 0.019,
-                        paddingHorizontal: dimensions.width * 0.016,
-                        marginBottom: dimensions.height * 0.019
-                    }}>
+                    <TouchableOpacity
+                        onPress={() => {
+                            setIsMelodyRunned(true);
+                            playMySound(levels[selectedLevel - 1].buttons);
+                        }}
+                        disabled={isMelodyRunned}
+                        style={{
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            borderRadius: dimensions.width * 0.057,
+                            backgroundColor: '#F9D54D',
+                            borderColor: '#e0c14c',
+                            width: dimensions.width * 0.4,
+                            alignSelf: 'center',
+                            width: dimensions.width * 0.88,
+                            borderWidth: dimensions.width * 0.01,
+                            paddingVertical: dimensions.height * 0.019,
+                            paddingHorizontal: dimensions.width * 0.016,
+                            marginBottom: dimensions.height * 0.019
+                        }}>
                         <Text
                             style={{
                                 fontFamily: fontSFProRegular,
@@ -398,17 +428,33 @@ const GameScreen = ({ setSelectedScreen, selectedScreen, selectedLevel, setSelec
 
                             </TouchableOpacity>
 
-
                             <TouchableOpacity
-                                onPress={() => {
+                                onPress={async () => {
                                     if (gameResult === 'Win') {
-                                        if(selectedLevel < 16) setSelectedLevel(selectedLevel + 1);
-                                            else setSelectedLevel(1);
+                                        if (selectedLevel < 16) {
+                                            try {
+                                                const storedLevels = await AsyncStorage.getItem('completedLevels');
+                                                let completedLevels = storedLevels ? JSON.parse(storedLevels) : [];
+
+                                                if (!completedLevels.includes(selectedLevel + 1)) {
+                                                    completedLevels.push(selectedLevel + 1);
+                                                    await AsyncStorage.setItem('completedLevels', JSON.stringify(completedLevels));
+                                                }
+                                            } catch (error) {
+                                                console.error('Failed to update completed levels:', error);
+                                            }
+                                            setSelectedLevel(selectedLevel + 1);
+
+                                        } else {
+                                            setSelectedLevel(1);
+
+                                        }
                                     }
                                     setIsPreparingVisible(true);
                                     setSelectedButtons([]);
                                     setIsGameStarted(true);
                                     setIsGameFinished(false);
+                                    setGameResult('');
 
                                 }}
                                 style={{
@@ -420,7 +466,8 @@ const GameScreen = ({ setSelectedScreen, selectedScreen, selectedLevel, setSelec
                                     alignSelf: 'center',
                                     width: dimensions.width * 0.4,
                                     borderWidth: dimensions.width * 0.01,
-                                }}>
+                                }}
+                            >
                                 <Text
                                     style={{
                                         fontFamily: fontLuckiestGuyRegular,
