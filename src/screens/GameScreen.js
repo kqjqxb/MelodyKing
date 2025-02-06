@@ -4,13 +4,9 @@ import {
     Text,
     TouchableOpacity,
     SafeAreaView,
-    StyleSheet,
     Dimensions,
-    ScrollView,
     Image,
-    Share,
     Alert,
-    Modal
 } from 'react-native';
 import Sound from 'react-native-sound';
 import { useAudio } from '../context/AudioContext';

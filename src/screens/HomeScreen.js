@@ -30,8 +30,6 @@ const HomeScreen = () => {
 
   const [dimensions, setDimensions] = useState(Dimensions.get('window'));
   const [selectedScreen, setSelectedScreen] = useState('Home');
-  const [currentCoin, setCurrentCoin] = useState(null);
-
   const [isSoundEnabled, setSoundEnabled] = useState(true);
 
   const [isLevelsVisible, setIsLevelsVisible] = useState(false);
@@ -56,7 +54,6 @@ const HomeScreen = () => {
         if (storedLevels !== null) {
           setCompletedLevels(JSON.parse(storedLevels));
         } else {
-          // Якщо в AsyncStorage ще нема completedLevels, додаємо перший рівень
           const initialLevels = [1];
           await AsyncStorage.setItem('completedLevels', JSON.stringify(initialLevels));
           setCompletedLevels(initialLevels);

@@ -20,9 +20,6 @@ import Slider from '@react-native-community/slider';
 const fontLuckiestGuyRegular = 'LuckiestGuy-Regular'
 
 
-
-const sharingText = '';
-
 const AboutScreen = ({ setSelectedScreen }) => {
   const [dimensions, setDimensions] = useState(Dimensions.get('window'));
   const { volume, setVolume } = useAudio();

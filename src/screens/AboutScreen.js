@@ -4,18 +4,12 @@ import {
   Text,
   TouchableOpacity,
   SafeAreaView,
-  StyleSheet,
   Dimensions,
-  ScrollView,
   Image,
-  Share,
-  Alert
 } from 'react-native';
-import { ChevronLeftIcon, } from 'react-native-heroicons/outline';
 
 
 
-const fontOpenSansBold = 'OpenSans-Bold';
 const fontLuckiestGuyRegular = 'LuckiestGuy-Regular'
 const fontSFProRegular = 'SFProText-Regular'
 
