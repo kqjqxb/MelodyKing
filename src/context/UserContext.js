@@ -7,17 +7,17 @@ export const UserProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    const loadUser = async () => {
+    const loadHereUser = async () => {
       try {
-        const storedUser = await AsyncStorage.getItem('currentUser');
-        if (storedUser) {
-          setUser(JSON.parse(storedUser));
+        const storedHereUser = await AsyncStorage.getItem('currentUser');
+        if (storedHereUser) {
+          setUser(JSON.parse(storedHereUser));
         }
       } catch (error) {
         console.error('Error loading user data:', error);
       }
     };
-    loadUser();
+    loadHereUser();
   }, []);
 
   const logout = async () => {
