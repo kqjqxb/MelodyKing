@@ -34,12 +34,16 @@
 	<key>NSAppleMusicUsageDescription</key>
 	<string>${PRODUCT_NAME} can replay audio</string>
 	<key>NSCameraUsageDescription</key>
-	<string>${PRODUCT_NAME} requires access to the camera to capture photos for user profiles and in-app activities.</string>
+	<string>${PRODUCT_NAME} needs access to your camera to take photos for user profiles and in-app features.</string>
+
 	<key>NSMicrophoneUsageDescription</key>
-	<string>${PRODUCT_NAME} requires microphone access to record audio for in-app video features.</string>
+	<string>${PRODUCT_NAME} needs microphone access to record audio for in-app video functionality.</string>
+
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>${PRODUCT_NAME} We need access to your photo library to select images or videos.</string>
-	<key>UIAppFonts</key>
+	<string>${PRODUCT_NAME} requires access to your photo library to select images or videos.</string>
+
+<key>UIAppFonts</key>
+
 	<array>
 		<string>LuckiestGuy-Regular.ttf</string>
 		<string>Montserrat-Black.ttf</string>
